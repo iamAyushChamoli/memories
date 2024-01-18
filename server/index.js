@@ -15,10 +15,10 @@ app.use(bodyParser.urlencoded({limit: "30mb", extended:true}));
 app.use(cors());
 
 //DB MongoDB Atlas
-const CONNECTION_URL ='mongodb+srv://ayush:root@cluster0.7kcuofk.mongodb.net/';
+const CONNECTION_URL ='mongodb+srv://root:root@cluster0.xmbpiny.mongodb.net/';
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect(CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(CONNECTION_URL)
 .then (()=>app.listen(PORT, ()=> console.log(`Server Running on port: ${PORT}`)))
 .catch((error)=>console.log(error.message));
 
